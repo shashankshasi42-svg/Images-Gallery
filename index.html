@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="hero">
+    <p class="eyebrow">A COLLECTION OF MOMENTS</p>
+    <h1>Image Gallery</h1>
+    <p class="subtitle">Explore beautiful places, one picture at a time.</p>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <p id="galleryCount">Showing 8 images</p>
+
+      <div class="filters">
+        <button class="filter-button active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="nature">Nature</button>
+        <button class="filter-button" data-filter="city">City</button>
+        <button class="filter-button" data-filter="ocean">Ocean</button>
+      </div>
+    </div>
+
+    <section class="gallery" id="gallery">
+
+      <button class="gallery-card" data-category="nature" data-title="Mountain Escape">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Mountain peaks">
+        <span class="image-caption">Mountain Escape</span>
+      </button>
+
+      <button class="gallery-card" data-category="ocean" data-title="Ocean Blue">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Ocean waves">
+        <span class="image-caption">Ocean Blue</span>
+      </button>
+
+      <button class="gallery-card" data-category="city" data-title="City Lights">
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80" alt="City at night">
+        <span class="image-caption">City Lights</span>
+      </button>
+
+      <button class="gallery-card" data-category="nature" data-title="Forest Path">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80" alt="Green forest">
+        <span class="image-caption">Forest Path</span>
+      </button>
+
+      <button class="gallery-card" data-category="city" data-title="Urban Lines">
+        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=900&q=80" alt="Modern buildings">
+        <span class="image-caption">Urban Lines</span>
+      </button>
+
+      <button class="gallery-card" data-category="ocean" data-title="Tropical Shore">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Tropical beach">
+        <span class="image-caption">Tropical Shore</span>
+      </button>
+
+      <button class="gallery-card" data-category="nature" data-title="Green Valley">
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80" alt="Natural landscape">
+        <span class="image-caption">Green Valley</span>
+      </button>
+
+      <button class="gallery-card" data-category="city" data-title="City Streets">
+        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=80" alt="City streets">
+        <span class="image-caption">City Streets</span>
+      </button>
+
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="lightbox-close" id="closeLightbox" aria-label="Close">×</button>
+    <button class="lightbox-arrow" id="previousImage" aria-label="Previous image">‹</button>
+
+    <figure class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <figcaption id="lightboxCaption"></figcaption>
+      <p class="lightbox-help">Use arrow keys to navigate · Esc to close</p>
+    </figure>
+
+    <button class="lightbox-arrow" id="nextImage" aria-label="Next image">›</button>
+  </div>
+
+  <footer class="footer">WONDERFUL MOMENTS</footer>
+
+</body>
+</html>
